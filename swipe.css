@@ -196,6 +196,37 @@ h6 {
   transform: translateX(4px);
 }
 
+/* ----------------- Layout Styles ----------------- */
+
+.section-container {
+  width: 100%;
+  max-width: var(--standard-width);
+}
+
+.two-column {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.two-column > .col-left,
+.two-column > .col-right {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 var(--spacing-md) 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.two-column > .col-right {
+  padding: 0 0 0 var(--spacing-md);
+}
+
 /* ----------------- Nav Bar ----------------- */
 
 .navbar {
