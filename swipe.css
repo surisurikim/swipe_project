@@ -168,3 +168,16 @@ p {
   opacity: 0.75;
   cursor: pointer;
 }
+
+.with-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.with-icon > img {
+  transition: transform 0.3s ease;
+}
+.with-icon:hover > img {
+  transform: translateX(4px);
+}
