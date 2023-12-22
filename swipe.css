@@ -47,7 +47,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   padding: var(--spacing-sm) 0 0 0;
-  background-color: var(--purple-1);
+  background-color: var(--bg-light);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -261,4 +261,38 @@ h6 {
 
 .navbar-button:hover {
   background: rgba(250, 250, 250, 0.5);
+}
+
+/* ----------------- Hero Styles ----------------- */
+
+main {
+  margin: var(--spacing-xl) 0;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  margin: var(--spacing-md) 0;
+}
+
+.button-container button:nth-of-type(2) {
+  margin: 0 0 0 var(--spacing-md);
+}
+
+.button-container .secondary-button {
+  color: var(--purple-2);
+}
+
+.hero p {
+  max-width: 480px;
+}
+
+.hero .hero-phone-container {
+  height: 564px;
+  align-items: flex-end;
+}
+
+.hero-phone {
+  height: 628px;
+  transform: translate(32px, -32px);
 }
