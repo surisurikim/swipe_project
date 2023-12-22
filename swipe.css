@@ -10,6 +10,7 @@
   --bg-white: #fff;
   --bg-light: #f7f9fc;
   --primary-btn-hover: #6d7a88;
+  --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
   /* ---------- font-family ---------- */
   --body-font: 'Roboto', sans-serif;
   --heading-font: 'Anek Telugu', sans-serif;
@@ -47,7 +48,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   padding: var(--spacing-sm) 0 0 0;
-  background-color: var(--purple-1);
+  background-color: var(--bg-light);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -106,12 +107,10 @@ h1 {
 
 h2 {
   font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: var(--h2-size);
+  font-weight: 600;
+  font-size: var(--h3-size);
   margin: 0;
   width: 100%;
-  letter-spacing: -0.25px;
-  line-height: var(--h2-height);
 }
 
 h3 {
@@ -204,6 +203,37 @@ h6 {
   transform: translateX(4px);
 }
 
+/* ----------------- Layout Styles ----------------- */
+
+.section-container {
+  width: 100%;
+  max-width: var(--standard-width);
+}
+
+.two-column {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.two-column > .col-left,
+.two-column > .col-right {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 var(--spacing-md) 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.two-column > .col-right {
+  padding: 0 0 0 var(--spacing-md);
+}
+
 /* ----------------- Nav Bar ----------------- */
 
 .navbar {
@@ -240,6 +270,7 @@ h6 {
   background: rgba(250, 250, 250, 0.5);
 }
 
+/* ----------------- Card Styles ----------------- */
 .card {
   display: flex;
   flex-direction: column;
@@ -251,4 +282,100 @@ h6 {
 .card .icon {
   height: 50px;
   margin: 0 0 var(--spacing-sm) 0;
+}
+/* ----------------- Hero Styles ----------------- */
+
+main {
+  margin: var(--spacing-xl) 0;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  margin: var(--spacing-md) 0;
+}
+
+.button-container button:nth-of-type(2) {
+  margin: 0 0 0 var(--spacing-md);
+}
+
+.button-container .secondary-button {
+  color: var(--purple-2);
+}
+
+.hero p {
+  max-width: 480px;
+}
+
+.hero .hero-phone-container {
+  height: 564px;
+  align-items: flex-end;
+}
+
+.hero-phone {
+  height: 628px;
+  transform: translate(32px, -32px);
+}
+/* -------------- Partners Grid Section -------------- */
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: row(4, 2fr);
+  grid-gap: var(--spacing-lg) var(--spacing-md);
+  margin: var(--spacing-xl) 0;
+}
+
+.partners-grid img {
+  height: 60px;
+  place-self: center;
+}
+
+/* -------------- Unified Platform Section -------------- */
+
+.unified-platform-section {
+  padding: var(--spacing-xl) 0;
+}
+
+.unified-platform-section h2 {
+  width: 50%;
+  margin-bottom: var(--spacing-md);
+}
+.unified-platform-section .primary-button {
+  background-color: var(--purple-1);
+  margin: var(--spacing-md) 0;
+}
+
+.unified-platform-section .primary-button:hover {
+  background-color: var(--primary-accent);
+}
+
+/* -------------- Graphic-grid Section -------------- */
+
+.graphic-grid {
+  display: grid;
+  grid-template-areas:
+    'card slack slack'
+    'phone slack slack'
+    'phone dash dash';
+  grid-gap: var(--spacing-lg);
+  padding: var(--spacing-lg) 0;
+}
+
+.graphic-grid img {
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+
+#credit-card {
+  grid-area: card;
+}
+#slack-invoice {
+  grid-area: slack;
+}
+#phone {
+  grid-area: phone;
+}
+#dash {
+  grid-area: dash;
 }
