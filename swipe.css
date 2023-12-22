@@ -296,3 +296,17 @@ main {
   height: 628px;
   transform: translate(32px, -32px);
 }
+/* ----------------- Partners Grid Section ----------------- */
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: row(4, 2fr);
+  grid-gap: var(--spacing-lg) var(--spacing-md);
+  margin: var(--spacing-xl) 0;
+}
+
+.partners-grid img {
+  height: 60px;
+  place-self: center;
+}
