@@ -379,3 +379,41 @@ main {
 #dash {
   grid-area: dash;
 }
+
+/* -------------- Integrations Section Styles -------------- */
+.integration-section {
+  color: var(--text-light);
+  background-color: var(--primary-accent);
+}
+
+.integration-section .primary-button {
+  background-color: var(--blue-1);
+  color: var(--primary-accent);
+  margin: var(--spacing-md) 0 0 0;
+}
+.integration-section .primary-button:hover {
+  background-color: var(--bg-white);
+}
+
+.integration-section .card-container {
+  display: flex;
+  margin: var(--spacing-lg) 0;
+}
+
+.integration-section .card-container .card {
+  width: 50%;
+}
+
+.integration-section .secondary-button {
+  color: var(--blue-1);
+}
+
+#api-code,
+#terminal-code {
+  border-radius: 20px;
+  max-width: 470px;
+}
+
+#api-code {
+  margin: 0 0 var(--spacing-md) 0;
+}
