@@ -122,6 +122,14 @@ h3 {
   width: 100%;
 }
 
+.card h3 {
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: var(--h6-size);
+  margin: 0;
+  width: 100%;
+}
+
 h4 {
   font-family: var(--heading-font);
   font-weight: 500;
@@ -230,4 +238,17 @@ h6 {
 
 .navbar-button:hover {
   background: rgba(250, 250, 250, 0.5);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-start;
+  align-items: flex-start;
+  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) 0;
+}
+
+.card .icon {
+  height: 50px;
+  margin: 0 0 var(--spacing-sm) 0;
 }
