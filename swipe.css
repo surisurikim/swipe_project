@@ -358,6 +358,7 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: var(--bg-light);
 }
 
 .unified-platform-section h2 {
@@ -379,6 +380,8 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
+
+  background-color: var(--bg-light);
 }
 .graphic-grid {
   display: grid;
@@ -411,10 +414,24 @@ main {
 /* -------------- Integrations Section Styles -------------- */
 .integration-section {
   color: var(--text-light);
-  background-color: var(--primary-accent);
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+  padding: calc(var(--spacing-xl) * 3) 0;
+  z-index: 1;
+}
+
+.integration-section::before {
+  content: '';
+  background-color: var(--primary-accent);
+  transform: skewY(-10deg);
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+  top: 32px;
+  left: 0;
+  z-index: -1;
 }
 
 .integration-section .primary-button {
@@ -455,6 +472,7 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: calc(var(--spacing-xl) * 3) 0;
 }
 
 .why-swipe-section .card-container {
@@ -475,13 +493,25 @@ main {
 
 /* -------------- Global Section -------------- */
 .global-section {
-  background-color: var(--primary-accent);
+  /* background-color: var(--primary-accent); */
   width: 100%;
   display: flex;
   justify-content: center;
   color: var(--text-light);
   position: relative;
-  padding: calc(var(--spacing-xl) * 3) 0;
+  padding: calc(var(--spacing-xl) * 3) 0 0 0;
+}
+
+.global-section::before {
+  content: '';
+  background-color: var(--primary-accent);
+  transform: skewY(-10deg);
+  position: absolute;
+  width: 100%;
+  height: 1200px;
+  top: -32px;
+  left: 0;
+  z-index: -1;
 }
 
 .global-section a {
@@ -516,6 +546,7 @@ main {
   opacity: 25%;
   top: 10%;
 }
+
 /* ----------- Virtual Events section ----------- */
 
 .virtual-events-section {
@@ -523,6 +554,18 @@ main {
   display: flex;
   justify-content: center;
   padding: calc(var(--spacing-xl) * 2) 0;
+  position: relative;
+}
+
+.virtual-events-section::before {
+  content: '';
+  background-color: var(--bg-white);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -32px;
+  left: 0;
+  z-index: -1;
 }
 
 .virtual-events-section .primary-button {
