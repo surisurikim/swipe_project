@@ -519,7 +519,6 @@ main {
 
 /* -------------- Global Section -------------- */
 .global-section {
-  /* background-color: var(--primary-accent); */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -794,10 +793,6 @@ main {
   .hero .hero-phone-container {
     height: 320px;
   }
-  .section-container #globe {
-    max-width: 500px;
-    right: 20px;
-  }
   .partners-grid {
     grid-gap: var(--spacing-md) var(--spacing-sm);
   }
@@ -821,6 +816,18 @@ main {
   }
   .why-swipe-section {
     padding: calc(var(--spacing-xl) * 2) 0;
+  }
+  /******* Global section *******/
+  .global-section .col-left {
+    width: 80%;
+  }
+  .global-section .col-right {
+    width: 20%;
+  }
+  .section-container #globe {
+    max-width: 720px;
+    right: -200px;
+    top: -20px;
   }
 }
 /* -------- Responsive (2) -------- */
@@ -866,6 +873,11 @@ main {
     padding: 0;
     width: 100%;
   }
+  /******* Global section *******/
+  .section-container #globe {
+    top: -30px;
+    opacity: 15%;
+  }
 }
 /* -------- Responsive (3) TABLET SIZE -------- */
 @media only screen and (max-width: 768px) {
@@ -877,6 +889,28 @@ main {
   }
   .unified-platform-section h2 {
     width: 75%;
+  }
+  /******* Global section *******/
+  .global-section .card-container {
+    margin: var(--spacing-xl) 0 var(--spacing-sm) 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  .global-section .card-container .card {
+    width: 50%;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .global-section .card-container .card .secondary-text {
+    padding-bottom: var(--spacing-sm);
+  }
+  .global-section .section-container {
+    transform: translateY(-80px);
+  }
+  .section-container #globe {
+    max-width: 500px;
+    right: -100px;
+    top: -100px;
   }
 }
 /* -------- Responsive (4) MOBILE SIZE -------- */
@@ -922,8 +956,26 @@ main {
   .why-swipe-section .card-container .card .icon {
     height: 30px;
   }
+  /******* Global section *******/
+  .global-section .col-left {
+    width: 100%;
+  }
+  .global-section .col-right {
+    width: 0%;
+  }
+  .section-container #globe {
+    max-width: 400px;
+    right: -130px;
+    top: -100px;
+  }
+  .global-section .card-container {
+    margin: var(--spacing-sm) 0;
+  }
+  .global-section .card-container .card {
+    width: 100%;
+    margin-left: var(--spacing-md);
+  }
 }
-
 /* ------------------------------------------ */
 /* ------------------------------------------ */
 html,
