@@ -801,12 +801,51 @@ main {
   .partners-grid {
     grid-gap: var(--spacing-md) var(--spacing-sm);
   }
+  /******* Integration section *******/
+  .integration-section .two-column > .col-left {
+    width: 60%;
+  }
+  .integration-section .two-column > .col-right {
+    width: 40%;
+  }
+  .integration-section .two-column > .col-right img {
+    width: 100%;
+  }
+  .integration-section {
+    padding: calc(var(--spacing-xl) * 2) 0;
+  }
+  .integration-section::before {
+    height: 800px;
+    top: -10px;
+  }
 }
 /* -------- Responsive (2) -------- */
 @media only screen and (max-width: 850px) {
   .partners-grid img {
     height: auto;
     width: 100%;
+  }
+
+  .unified-platform-section {
+    padding: var(--spacing-lg) 0;
+  }
+  /******* Integration section *******/
+  .integration-section .two-column > .col-left {
+    width: 100%;
+    padding: 0;
+  }
+  .integration-section .two-column > .col-right {
+    width: 0%;
+  }
+  .integration-section .two-column > .col-right img {
+    display: none;
+  }
+  .integration-section {
+    padding: calc(var(--spacing-xl) * 1) 0;
+  }
+  .integration-section::before {
+    height: 700px;
+    top: -20px;
   }
 }
 /* -------- Responsive (3) TABLET SIZE -------- */
@@ -829,21 +868,39 @@ main {
   .partners-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  /******* unified platform section *******/
   .unified-platform-section {
     padding: var(--spacing-md) 0;
   }
   .unified-platform-section .two-column {
     flex-direction: column;
   }
-
   .unified-platform-section h2 {
     width: 90%;
   }
   .two-column > .col-left,
   .two-column > .col-right {
     width: 100%;
-  }
-  .two-column > .col-right {
     padding: 0 0 0 0;
   }
+  /******* Integration section *******/
+
+  .integration-section .card-container {
+    flex-direction: column;
+  }
+
+  .integration-section .card-container .card {
+    width: 100%;
+  }
+  .integration-section::before {
+    height: 900px;
+    top: -20px;
+  }
+}
+/* ------------------------------------------ */
+html,
+body {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
 }
