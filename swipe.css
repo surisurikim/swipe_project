@@ -801,6 +801,7 @@ main {
   .partners-grid {
     grid-gap: var(--spacing-md) var(--spacing-sm);
   }
+
   /******* Integration section *******/
   .integration-section .two-column > .col-left {
     width: 60%;
@@ -818,6 +819,9 @@ main {
     height: 800px;
     top: -10px;
   }
+  .why-swipe-section {
+    padding: calc(var(--spacing-xl) * 2) 0;
+  }
 }
 /* -------- Responsive (2) -------- */
 @media only screen and (max-width: 850px) {
@@ -825,10 +829,10 @@ main {
     height: auto;
     width: 100%;
   }
-
   .unified-platform-section {
     padding: var(--spacing-lg) 0;
   }
+
   /******* Integration section *******/
   .integration-section .two-column > .col-left {
     width: 100%;
@@ -845,7 +849,22 @@ main {
   }
   .integration-section::before {
     height: 700px;
-    top: -20px;
+    top: -30px;
+  }
+
+  /******* Why Swipe section *******/
+  .why-swipe-section {
+    padding: var(--spacing-xl) 0;
+  }
+  .why-swipe-section .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--spacing-md);
+  }
+  .why-swipe-section .card-container .card {
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
 }
 /* -------- Responsive (3) TABLET SIZE -------- */
@@ -868,6 +887,7 @@ main {
   .partners-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   /******* unified platform section *******/
   .unified-platform-section {
     padding: var(--spacing-md) 0;
@@ -883,12 +903,11 @@ main {
     width: 100%;
     padding: 0 0 0 0;
   }
-  /******* Integration section *******/
 
+  /******* Integration section *******/
   .integration-section .card-container {
     flex-direction: column;
   }
-
   .integration-section .card-container .card {
     width: 100%;
   }
@@ -896,7 +915,16 @@ main {
     height: 900px;
     top: -20px;
   }
+  /******* Why Swipe section *******/
+  .why-swipe-section .card-container {
+    grid-gap: var(--spacing-lg);
+  }
+  .why-swipe-section .card-container .card .icon {
+    height: 30px;
+  }
 }
+
+/* ------------------------------------------ */
 /* ------------------------------------------ */
 html,
 body {
