@@ -1,5 +1,6 @@
+/* ----------------- Variables ----------------- */
 :root {
-  /* ---------- color ---------- */
+  /* color variables */
   --text-dark: #000;
   --text-light: #fff;
   --text-grey: #adbbdc;
@@ -18,10 +19,10 @@
     #36c5f0 76.92%,
     #83e2ff 96.96%
   );
-  /* ---------- font-family ---------- */
+  /* font-family */
   --body-font: 'Roboto', sans-serif;
   --heading-font: 'Anek Telugu', sans-serif;
-  /* ---------- font size ---------- */
+  /* font size variables */
   --h1-size: 94px;
   --h1-height: 108px;
   --h2-size: 50px;
@@ -37,21 +38,26 @@
   --secondary-text-size: 14px;
   --secondary-text-height: 18px;
   --button-size: 16px;
-  /* ---------- spacing ---------- */
+  /* spacing */
   --spacing-sm: 8px;
   --spacing-md: 16px;
   --spacing-lg: 32px;
   --spacing-xl: 64px;
-  /* ---------- screen sizing(width) ---------- */
+  /* screen sizing(width) */
   --standard-width: 1144px;
 }
 
-/* ----------------- Basics ----------------- */
+/* --------- General Element Styles --------- */
+html,
+body {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
 
 body {
   font-family: var(--body-font);
   color: var(--text-dark);
-  width: 100%;
   margin: 0;
   box-sizing: border-box;
   padding: var(--spacing-sm) 0 0 0;
@@ -60,6 +66,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+main {
+  margin: var(--spacing-xl) 0 0 0;
+  width: 100%;
 }
 
 a {
@@ -101,7 +112,6 @@ p {
 }
 
 /* ----------------- Headings ----------------- */
-
 h1 {
   font-family: var(--heading-font);
   font-weight: 600;
@@ -160,8 +170,7 @@ h6 {
   width: 100%;
 }
 
-/* ----------------- buttons ----------------- */
-
+/* ----------------- Buttons ----------------- */
 .primary-button {
   font-family: var(--body-font);
   font-size: var(--button-size);
@@ -211,7 +220,6 @@ h6 {
 }
 
 /* ----------------- Layout Styles ----------------- */
-
 .section-container {
   width: 100%;
   max-width: var(--standard-width);
@@ -242,7 +250,6 @@ h6 {
 }
 
 /* ----------------- Nav Bar ----------------- */
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -297,8 +304,7 @@ h6 {
   margin: 0 0 var(--spacing-sm) 0;
 }
 
-/* ----------------- Animated Gradient ----------------- */
-
+/* --------- Animated Gradient Background --------- */
 #gradient-canvas {
   width: 200%;
   height: 980px;
@@ -314,10 +320,13 @@ h6 {
 }
 
 /* ----------------- Hero Styles ----------------- */
-
-main {
-  margin: var(--spacing-xl) 0 0 0;
+.hero {
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.hero p {
+  max-width: 480px;
 }
 
 .button-container {
@@ -325,35 +334,22 @@ main {
   flex-direction: row;
   margin: var(--spacing-md) 0;
 }
-
 .button-container button:nth-of-type(2) {
   margin: 0 0 0 var(--spacing-md);
 }
-
 .button-container .secondary-button {
   color: var(--purple-2);
 }
-
-.hero {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.hero p {
-  max-width: 480px;
-}
-
 .hero .hero-phone-container {
   height: 564px;
   align-items: flex-end;
 }
-
 .hero-phone {
   height: 628px;
   transform: translate(32px, -32px);
 }
-/* -------------- Partners Grid Section -------------- */
+
+/* ------------- Partners Grid Section ------------- */
 
 .partners-section {
   width: 100%;
@@ -373,7 +369,7 @@ main {
   place-self: center;
 }
 
-/* -------------- Unified Platform Section -------------- */
+/* ------------ Unified Platform Section ------------ */
 
 .unified-platform-section {
   padding: var(--spacing-xl) 0;
@@ -402,7 +398,6 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
-
   background-color: var(--bg-light);
 }
 .graphic-grid {
@@ -473,6 +468,9 @@ main {
 .integration-section .primary-button:hover {
   background-color: var(--bg-white);
 }
+.integration-section .secondary-button {
+  color: var(--blue-1);
+}
 
 .integration-section .card-container {
   display: flex;
@@ -481,10 +479,6 @@ main {
 
 .integration-section .card-container .card {
   width: 50%;
-}
-
-.integration-section .secondary-button {
-  color: var(--blue-1);
 }
 
 #api-code,
@@ -675,7 +669,7 @@ main {
   width: 50%;
 }
 
-/* -------------- Virtual Events section -------------- */
+/* -------------- Getting started section -------------- */
 .getting-started-section {
   display: flex;
   justify-content: center;
@@ -717,15 +711,15 @@ main {
   padding: var(--spacing-xl) 0;
 }
 
-#footer-logo {
-  max-width: 108px;
-  margin: 0 0 var(--spacing-md) 0;
-}
-
 .footer .section-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+#footer-logo {
+  max-width: 108px;
+  margin: 0 0 var(--spacing-md) 0;
 }
 
 .footer .col {
@@ -757,6 +751,7 @@ main {
   align-items: center;
   margin: var(--spacing-md) 0;
 }
+
 .footer .icon-link img {
   width: 24px;
 }
@@ -765,29 +760,25 @@ main {
   font-size: var(--h6-size);
   font-weight: 700;
 }
+/* -------------------------------- */
+/* -------- Breakpoints ----------- */
 
-/* -------- Responsive (1) -------- */
+/* -------- (1) custom breakpoint 1144px -------- */
 @media only screen and (max-width: 1144px) {
-  .section-container {
-    padding: 0 var(--spacing-md);
-  }
-  .navbar {
-    width: 95%;
-  }
   :root {
     --h1-size: 64px;
     --h1-height: 72px;
     --h3-size: 34px;
-    /* 
-  --h1-size: 94px;
-  --h1-height: 108px;
-  --h2-size: 50px;
-  --h2-height: 75px;
-  --h3-size: 40px;
-  --h4-size: 32px;
-  --h5-size: 28px;
-  --h6-size: 22px; */
   }
+  /* General layout */
+  .section-container {
+    padding: 0 var(--spacing-md);
+  }
+  /* Navbar */
+  .navbar {
+    width: 95%;
+  }
+  /* Hero section */
   .hero .col-left {
     width: 70%;
   }
@@ -804,8 +795,7 @@ main {
   .partners-grid {
     grid-gap: var(--spacing-md) var(--spacing-sm);
   }
-
-  /******* Integration section *******/
+  /* Integration section */
   .integration-section .two-column > .col-left {
     width: 60%;
   }
@@ -822,11 +812,11 @@ main {
     height: 800px;
     top: -10px;
   }
-  /******* Why swipe section *******/
+  /* Why swipe section */
   .why-swipe-section {
     padding: var(--spacing-xl) 0 calc(var(--spacing-xl) * 2) 0;
   }
-  /******* Global section *******/
+  /* Global section */
   .global-section .col-left {
     width: 80%;
   }
@@ -838,7 +828,7 @@ main {
     right: -200px;
     top: -20px;
   }
-  /******* virtual events section *******/
+  /* virtual events section */
   .virtual-events-section {
     padding: var(--spacing-md) 0 var(--spacing-xl) 0;
   }
@@ -859,10 +849,10 @@ main {
     padding-left: var(--spacing-md);
   }
 }
-/* -------- Responsive (2) -------- */
-@media only screen and (max-width: 850px) {
-  /************ Nav Bar ************/
 
+/* -------- (2) custom breakpoint 850px -------- */
+@media only screen and (max-width: 850px) {
+  /* Nav bar */
   .navbar {
     padding: var(--spacing-md);
   }
@@ -889,17 +879,16 @@ main {
     margin: 1.5px;
     border-radius: 5px;
   }
-  /***********************************/
+  /* Hero section */
   .partners-grid img {
     height: auto;
     width: 100%;
   }
+  /* Unified platform section */
   .unified-platform-section {
     padding: var(--spacing-lg) 0;
   }
-
-  /******* Integration section *******/
-
+  /* Integration section */
   .integration-section {
     padding: calc(var(--spacing-xl) * 1) 0;
   }
@@ -918,8 +907,7 @@ main {
     height: 700px;
     top: -20px;
   }
-
-  /******* Why Swipe section *******/
+  /* Why Swipe section */
   .why-swipe-section {
     padding: var(--spacing-xl) 0;
   }
@@ -933,13 +921,12 @@ main {
     padding: 0;
     width: 100%;
   }
-  /******* Global section *******/
+  /* Global section */
   .section-container #globe {
     top: -30px;
     opacity: 15%;
   }
-
-  /****** virtual events section ******/
+  /* virtual events section */
   .virtual-events-section .section-container {
     flex-direction: column;
   }
@@ -968,27 +955,23 @@ main {
   .virtual-events-section .avatars {
     bottom: -40px;
   }
-
   /* footer section */
   .footer {
     padding: var(--spacing-lg);
   }
-
   .footer .section-container {
     flex-wrap: wrap;
   }
-
   .footer .col {
     width: 45%;
     margin: var(--spacing-md) 0;
   }
-
   .footer .col:nth-of-type(2n + 1) {
     margin-right: var(--spacing-md);
   }
 }
 
-/* -------- Responsive (3) TABLET SIZE -------- */
+/* -------- Tablet size breakpoint -------- */
 @media only screen and (max-width: 768px) {
   .hero .col-left {
     width: 100%;
@@ -999,7 +982,7 @@ main {
   .unified-platform-section h2 {
     width: 75%;
   }
-  /******* Global section *******/
+  /* Global section */
   .global-section .card-container {
     margin: var(--spacing-xl) 0 var(--spacing-sm) 0;
     padding: 0;
@@ -1024,7 +1007,7 @@ main {
   #sessions-logo {
     width: 300px;
   }
-  /******* Getting Started section *******/
+  /* Getting Started section */
   .getting-started-section {
     padding: var(--spacing-lg) 0 var(--spacing-xl) 0;
   }
@@ -1048,27 +1031,26 @@ main {
   }
 }
 
-/* -------- Responsive (4) MOBILE SIZE -------- */
+/* -------- Mobile size breakpoint -------- */
 @media only screen and (max-width: 550px) {
   :root {
     --h1-size: 55px;
     --h1-height: 60px;
     --h2-size: 38px;
   }
-  .partners-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+
   /* Navbar */
   .navbar {
     margin: 0 0 var(--spacing-lg) 0;
   }
-  /* Hero Styles */
   #gradient-canvas {
     height: 820px;
   }
   main {
     margin: var(--spacing-lg) 0 0 0;
   }
+
+  /* Hero */
   .hero .col-left {
     width: 100%;
     padding: 0;
@@ -1076,8 +1058,11 @@ main {
   .hero .col-right {
     display: none;
   }
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-  /******* unified platform section *******/
+  /* unified platform section */
   .unified-platform-section {
     padding: var(--spacing-md) 0;
   }
@@ -1093,7 +1078,7 @@ main {
     padding: 0 0 0 0;
   }
 
-  /******* Integration section *******/
+  /* Integration section */
   .integration-section .card-container {
     flex-direction: column;
   }
@@ -1104,7 +1089,8 @@ main {
     height: 930px;
     top: -20px;
   }
-  /******* Why Swipe section *******/
+
+  /* Why Swipe section */
   .why-swipe-section {
     padding: var(--spacing-lg) 0;
   }
@@ -1114,7 +1100,8 @@ main {
   .why-swipe-section .card-container .card .icon {
     height: 30px;
   }
-  /******* Global section *******/
+
+  /* Global section */
   .global-section .col-left {
     width: 100%;
   }
@@ -1137,16 +1124,8 @@ main {
     width: 240px;
   }
 
-  /******* Footer *******/
+  /* Footer */
   .footer .section-container .col a {
     font-size: 12px;
   }
-}
-/* ------------------------------------------ */
-/* ------------------------------------------ */
-html,
-body {
-  width: 100%;
-  position: relative;
-  overflow-x: hidden;
 }
